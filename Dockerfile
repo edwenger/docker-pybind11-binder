@@ -17,3 +17,7 @@ ENV HOME /usr/local
 # Get latest binder code from repository
 RUN cd $HOME \
     && git clone https://github.com/RosettaCommons/binder.git
+
+# Build binder
+RUN cd $HOME/binder \
+	&& python3 build.py -j8
